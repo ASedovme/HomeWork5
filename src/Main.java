@@ -43,8 +43,8 @@ public class Main {
         ;
 //Задача 3
         System.out.println("Задача 3");
-        int year = 2014;
-        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+        int year = 2012;
+        if (((year % 4 == 0) && (year % 100 != 0) && (year>=1584)) || (year % 400 == 0)) {
             System.out.println(year + " Год высокосный");
         } else {
             System.out.println(year + " Год невысокосный");
