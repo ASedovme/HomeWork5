@@ -5,61 +5,65 @@ public class Main {
         int clientOs = 1;
         switch (clientOs) {
             case 0:
-                System.out.println("Установите программу для IOS");
+                System.out.println("Установите версию приложения для IOS по ссылке");
                 break;
             case 1:
-                System.out.println("Установите программу для Android");
+                System.out.println("Установите версию приложения для Android по ссылке");
                 break;
             default:
-                System.out.println("Вам не повезло, смените телефон");
+                System.out.println("Вам не повезло, для вашей операционной системы нет приложения. Смените телефон");
         }
 //Задача 2
         System.out.println("Задача 2");
         int phoneYear = 2013;
-        int clientOss = 0;
+        clientOs = 0;
         if (phoneYear >= 2015) {
-            switch (clientOss) {
+            switch (clientOs) {
                 case 0:
-                    System.out.println("Установите программу для IOS");
+                    System.out.println("Установите версию приложения для IOS по ссылке");
                     break;
                 case 1:
-                    System.out.println("Установите программу для Android");
+                    System.out.println("Установите версию приложения для Android по ссылке");
                     break;
                 default:
-                    System.out.println("Вам не повезло, смените телефон");
+                    System.out.println("Вам не повезло, для вашей операционной системы нет приложения. Смените телефон");
             }
         } else {
-            switch (clientOss) {
+            switch (clientOs) {
                 case 0:
-                    System.out.println("Установите облегченную версию программы для IOS");
+                    System.out.println("Установите облегченную версию приложения для IOS по ссылке");
                     break;
                 case 1:
-                    System.out.println("Установите облегченную версию программы для Android");
+                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
                     break;
                 default:
-                    System.out.println("Вам не повезло, смените телефон");
+                    System.out.println("Вам не повезло, для вашей операционной системы нет приложения. Смените телефон");
             }
         }
         ;
 //Задача 3
         System.out.println("Задача 3");
         int year = 2012;
-        if (((year % 4 == 0) && (year % 100 != 0) && (year>=1584)) || (year % 400 == 0)) {
-            System.out.println(year + " Год высокосный");
+        if (((year % 4 == 0) && (year % 100 != 0) && (year >= 1584)) || (year % 400 == 0)) {
+            System.out.println(year + " Год является высокосным");
         } else {
-            System.out.println(year + " Год невысокосный");
+            System.out.println(year + " Год является невысокосным");
         }
 //Задача 4
         System.out.println("Задача 4");
-        int deliveryDistance = 95;
+        int deliveryDistance = 50;
         int deliveryDay = 1;
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней " + deliveryDay);
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        } else {
             deliveryDay = deliveryDay + 1;
+        }
+        if (deliveryDistance > 20 && deliveryDistance <= 60) {
             System.out.println("Потребуется дней " + deliveryDay);
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            deliveryDay = deliveryDay + 2;
+        } else {
+            deliveryDay = deliveryDay + 1;
+        }
+        if (deliveryDistance > 60 && deliveryDistance <= 100) {
             System.out.println("Потребуется дней " + deliveryDay);
         } else {
             System.out.println("Дооставки нет");
@@ -68,7 +72,7 @@ public class Main {
 //Задача 5
         System.out.println("Задача 5");
         int monthNumber = 12;
-        switch (monthNumber){
+        switch (monthNumber) {
             case 1:
                 System.out.println("Зима");
                 break;
@@ -106,7 +110,7 @@ public class Main {
                 System.out.println("Зима");
                 break;
             default:
-                System.out.println("Error");
+                System.out.println("Такого месяца не существует");
         }
     }
 }
